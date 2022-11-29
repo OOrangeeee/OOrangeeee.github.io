@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html  >
+<html>
+<head>
+    <title></title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="main">
+        <h1 class="logo">
+            名侦探柯南</h1>
+        <div class="nav">
+            <ul>
+                <li><a href="index.html">故事简介</a></li>
+                <li><a href="web/renwu.html">主要人物</a></li>
+                <li><a href="web/juqing.html">主线剧情</a></li>
+                <li><a href="web/zuozhe.html">作者简介</a> </li>
+                <li><a href="web/songs.html">主题曲介绍</a></li>
+                <li><a href="web/juchang.html">最新剧场版</a></li>
+                <li><a href="https://tudita.gitee.io/myweb" target="_blank">返回寝室主页</a></li>
+            </ul>
+        </div>
+        <div class="banner">
+            <img src="images/banner1.jpg" id="img" />
+            <script>
+                var a = ["banner4.jpg", "banner3.jpg", "banner2.jpg", "banner1.jpg"];
+                var k = 0;
+                var time = 3;
+                var tID;
+                function nextImg() {
+                    k++;
+                    if (k === a.length)
+                        k = 0;
+                    document.getElementById("img").src = "images/" + a[k];
+                }
+                function setTime() {
+                    time--;
+                    if (time <= 0) {
+                        nextImg();
+                        time = 3;
+
+                    }
+                }
+                tID = setInterval("setTime()", 1000);
+            </script>
+        </div>
+        <h2>
+            故事简介</h2>
+        <div class="about">
+            <div class="img">
+                <img src="images/1.jpg">
+            </div>
+            <div class="text">
+                <p>
+                    高中生侦探工藤新一和青梅竹马的同学毛利兰一同去游乐园玩的时候，目击了黑衣男子的可疑交易现场。只顾偷看交易的工藤新一，却忽略了从背后接近的另一名同伙。他被那名男子灌下了毒药，当他醒来时，身体居然缩小了！
+                </p>
+                <p>
+                    如果让那些家伙知道工藤新一还活着的话，不仅性命难保，还会危及身边的人。在阿笠博士的建议下他决定隐瞒身份，在被小兰问及名字时，化名江户川柯南，为了搜集那些家伙的情报，寄住在父亲以侦探为业的小兰家中。
+                </p>
+                <p>
+                    谜团重重的黑衣组织……他所了解的，就只有他们是以酒的名称作为代号的。为了揭露那些家伙的真面目，小小侦探江户川柯南开始大显身手！
+                </p>
+            </div>
+        </div>
+        <div class="pics">
+            <h2>
+                精美图片</h2>
+            <ul>
+                <li><a href="#">
+                    <img src="images/2.jpg"></a></li>
+                <li><a href="#">
+                    <img src="images/3.jpg"></a></li>
+                <li><a href="#">
+                    <img src="images/4.jpg"></a></li>
+                <li><a href="#">
+                    <img src="images/5.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
